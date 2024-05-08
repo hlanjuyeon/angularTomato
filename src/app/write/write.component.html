@@ -1,0 +1,27 @@
+<div class="note">
+    <div class="logo">
+        <p class="h1">Notes App</p>
+        <p class="h5">Take notes and never forget.</p>
+        <a [routerLink]="['/']" class="back_btn">
+            <img width="25" height="25" src="https://img.icons8.com/ios/50/circled-chevron-left.png" alt="circled-chevron-left"/>
+        </a>
+    </div>
+
+    <form class="row g-3 create_form" [formGroup]="noteForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <input type="text" class="form-control create_title" id="exampleFormControlInput1" placeholder="Note Title"
+                formControlName="title">
+        </div>
+        <div class="mb-3">
+            <textarea class="form-control create_content" id="exampleFormControlTextarea1" rows="3"
+                placeholder="Enter note text" formControlName="content"></textarea>
+        </div>
+
+        <div class="col-10">
+            <button type="submit" class="btn btn-primary r_btn" [disabled]="!noteForm.valid">Done</button>
+        </div>
+
+        <input type="hidden" formControlName="writeday">
+        <input type="hidden" formControlName="id">
+    </form>
+</div>

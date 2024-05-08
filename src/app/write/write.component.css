@@ -1,0 +1,43 @@
+.note {
+    background: #E6E6E6;
+    width: 550px;
+    height: 570px;
+    border-radius: 10px;
+    margin-top: 15%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+}
+
+.logo {
+    padding-top: 35px;
+}
+
+.back_btn {
+    float: right;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.r_btn {
+    float: right;
+}
+
+.l_btn {
+    float: left;
+}
+
+.create_title{
+    margin-bottom: 15px;
+}
+
+.create_content{
+    margin-bottom: 15px;
+    height: 280px;
+}
+
+.create_form{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+}

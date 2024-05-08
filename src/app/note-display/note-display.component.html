@@ -1,0 +1,7 @@
+<div class="col-10 text">
+    <a [routerLink]="['/details', note.id]">
+        <p class="main_title">{{ note.title }}</p>
+        <p *ngIf="note.updateday == null">{{ note.writeday }}</p>
+        <p *ngIf="note.updateday != null">{{ note.updateday }}</p>
+    </a>
+</div>

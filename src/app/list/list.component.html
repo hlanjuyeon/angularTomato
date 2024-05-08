@@ -1,0 +1,28 @@
+<div class="note">
+    <div class="logo">
+        <p class="h1">Notes App</p>
+        <p class="h5">Take notes and never forget.</p>
+    </div>
+
+    <div class="row setting">
+        <app-search></app-search>
+        
+        <select class="col-md-3 pl">
+            <option value="1">Sort by last edited</option>
+            <option value="2">Sort by recently created</option>
+            <option value="3">Sort alphabeticatly</option>
+        </select>
+    </div>
+
+    <div class="col-10" *ngIf="noteList === null">
+        <p>No Result</p>
+    </div>
+
+    <app-note-display
+        *ngFor="let note of noteList"
+        [note]="note"
+    ></app-note-display>
+
+    <a class="btn btn-primary r_btn col-10"
+    [routerLink]="['/write', noteListCount]">Create Note</a>
+</div>

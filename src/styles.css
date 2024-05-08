@@ -1,0 +1,7 @@
+body {
+    /* 상하좌우 정중앙 정렬하기 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FACC2E;
+}

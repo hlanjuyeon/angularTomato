@@ -1,0 +1,14 @@
+<div class="col-md-7">
+    <input class="form-control" list="datalistOptions" id="exampleDataList" 
+    #searchBox
+    (input)="search(searchBox.value)"
+    placeholder="Search">
+
+    <ul class="search-result">
+        <li *ngFor="let note of noteList$ | async">
+            <a [routerLink]="['/details', note.id]">
+                {{note.title}}
+            </a>
+        </li>
+    </ul>
+</div>
